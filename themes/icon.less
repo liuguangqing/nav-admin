@@ -1,0 +1,30 @@
+@baseUrl: 'https://img.51fanbei.com/h5/pc/';
+
+.image(@url) {
+  background-repeat: no-repeat;
+  background-image: url('@{baseUrl}@{url}.png');
+}
+
+.icon(@url, @width, @height) {
+  .image(@url);
+  width: @width;
+  height: @height;
+  background-size: 100% 100%;
+}
+
+.move_up_b {
+  .icon('admin_vis_move_up_b', 24px, 24px);
+  margin: 5px 0px;
+}
+.move_down_b {
+  .icon('admin_vis_move_down_b', 24px, 24px);
+  margin: 5px 0px;
+}
+.move_up_g {
+  .icon('admin_vis_move_up_g', 24px, 24px);
+  margin: 5px 0px;
+}
+.move_down_g {
+  .icon('admin_vis_move_down_g', 24px, 24px);
+  margin: 5px 0px;
+}
