@@ -89,7 +89,11 @@ class categoryEdit extends Component {
                     case '二级类目':
                         sendParams.parentId = this.state.first
                         sendParams.level = 2
-                        // if(!this.state.first) return message.warning('请先选择一级类目') 
+                        if(sendParams.cateStat == 'menu'){
+                            if(this.state.fileList[0]){
+                                sendParams.imgUrl = this.state.fileList[0].url
+                            } 
+                        } 
                         break;
                     case '三级类目':
                         sendParams.parentId = this.state.second

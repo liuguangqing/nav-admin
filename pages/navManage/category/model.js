@@ -36,7 +36,8 @@ export default {
           if(e.child) fun(e.child)
           if(e.contentList) {
             e.contentList.forEach(e=>e.info = true)
-            e.child = e.contentList 
+            let child = e.child? e.child : [] 
+            e.child = [...e.contentList, ...child ] 
           }
         })
         return arr1
